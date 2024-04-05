@@ -5,14 +5,14 @@ import Link from 'next/link'
 import { BackgroundGradient } from './ui/background-gradient'
 import { Button } from './ui/moving-border'
 
-interface Course {
+interface Course{
     id: number,
     title: string,
     slug: string,
-    descripion: string,
+    description: string,
     price: number,
-    instrucor: string,
-    isFeatued: boolean
+    instructor: string,
+    isFeatured: boolean
 }
 
 function FeaturedSection() {
@@ -32,7 +32,7 @@ function FeaturedSection() {
             <div className='mt-10 mx-8'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 justify-center'>
                     {
-                        featuredCourse.map((course) => (
+                        featuredCourse.map((course : Course) => (
                             <div key={course.id} className="flex justify-center">
                                 <BackgroundGradient
                                     className="flex flex-col rounded-[22px] bg-white dark:hover:bg-black dark:bg-zinc-900 duration-200 overflow-hidden h-full max-w-sm">
