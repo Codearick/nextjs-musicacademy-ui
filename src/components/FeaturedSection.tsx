@@ -5,19 +5,19 @@ import Link from 'next/link'
 import { BackgroundGradient } from './ui/background-gradient'
 import { Button } from './ui/moving-border'
 
-interface Course{
-    id: number,
-    title: string,
-    slug: string,
-    description: string,
-    price: number,
-    instructor: string,
-    isFeatured: boolean
-}
+// interface Course{
+//     id: number,
+//     title: string,
+//     slug: string,
+//     description: string,
+//     price: number,
+//     instructor: string,
+//     isFeatured: boolean
+// }
 
 function FeaturedSection() {
 
-    const featuredCourse = courseData.courses.filter((item: Course) => item.isFeatured)
+    const featuredCourse = courseData.courses.filter((item) => item.isFeatured)
     console.log(featuredCourse)
 
     return (
@@ -32,7 +32,7 @@ function FeaturedSection() {
             <div className='mt-10 mx-8'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 justify-center'>
                     {
-                        featuredCourse.map((course : Course) => (
+                        featuredCourse.map((course) => (
                             <div key={course.id} className="flex justify-center">
                                 <BackgroundGradient
                                     className="flex flex-col rounded-[22px] bg-white dark:hover:bg-black dark:bg-zinc-900 duration-200 overflow-hidden h-full max-w-sm">
